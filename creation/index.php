@@ -24,7 +24,8 @@
     if(strpos($msg, "ERROR")>0)
             die();
     
-    UtilityIO::removeDirectory("../form");
+    if(file_exists("../form")) UtilityIO::removeDirectory("../form");
+    else        mkdir ("../form");
     writeLog($filelog,"---------- creazione index.php ---");
     try{
         $handle = fopen("../form/index.php","x+");
@@ -149,6 +150,8 @@
     UtilityIO::chmod("../form", "777");
      writeLog($filelog,"---------CREO IL DUMP DEL DB ---");
      $now = new DateTime();
+     if(file_exists("../data")) UtilityIO::removeDirectory("../data");
+     else        mkdir ("../data");
     $repository->dumpDb($db_user,$db_password,$database,"../data/dump$database".$now->format('YmdHms').".sql");
     UtilityIO::chmod("../data", "777");
     writeLog($filelog,"---------FORM DI BASE CREATO [ SE SEI QUI E NON E' UN BEL POSTO, VUOL DIRE CHE CMQ TUTTO HA FUNZIONATO! ENJOY IT E PROVA <a href=\"../form/index.php\">QUI</a> ]---");

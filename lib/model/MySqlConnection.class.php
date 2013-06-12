@@ -2,7 +2,7 @@
 /**
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Classe per la gestione della connessione al database mysql
+ * Class to manage MySql DB Connection
  */
  class MySqlConnection{
         
@@ -26,7 +26,7 @@
             $this->connect();
         }
         /**
-         * istanzia una connessione ad un db mysql, attraverso il pattern singleton garantisce che ve ne sia una sola
+         * create the connection
          * @param string $server
          * @param string $username
          * @param string $password
@@ -43,7 +43,7 @@
             return self::$myConnection;
         }
         /**
-         * connette ad un db mysql
+         * connect to db
          */
         private function connect()
         {
@@ -69,7 +69,7 @@
             $this->connect();
         }
         /**
-         * non permette la clonazione della connessione
+         * forbit to clone db connection
          */
         public function __clone()
         {
@@ -79,7 +79,7 @@
         
         
         /*
-         * Esegue una query sul database
+         * exec a query to db and return an array with recordset and number of lines
          * @param string $statement
          */
         function exeSQL ($statement) {
@@ -94,26 +94,26 @@
 
         }
         /*
-         * Inizia una transazione
+         * begin a transaction
          */
         function beginTransaction() { 
    
-          @mysql_query("BEGIN");
+          mysql_query("BEGIN");
         }
         /*
-         * Esegue una commit
+         * do commit
          */
         function CommitTransaction()  {
             @mysql_query("COMMIT");
         }
         /*
-         * Esegue un rollback
+         * do rollback
          */
         function RollBackTransaction()  {
             @mysql_query("ROLLBACK");
         }
         /*
-         * Ritorna una riga di un record set
+         * get the resultset for a particular recordset
          * @param array $result
          * @param int $i
          */
@@ -125,7 +125,7 @@
         }
         
         /*
-         * Ritorna il numero field di un recordset
+         * return the number of fields
          * @param array $result
          */
         public function getNumFields ($result) 
@@ -133,7 +133,7 @@
           return @mysql_num_fields($result); 
         }
         /**
-         * pulisce il campo per la query a db
+         * clean field for db query
          * @param type $field
          * @return type
          */
@@ -147,7 +147,7 @@
             return $field;
         }
         /**
-         * Log Error segnala un errore nella tabella degli errori su db, dove è presente una tabella con questi campi
+         * return the error 
          * @param string $msg
          */
         public function LogError($msg)  {
