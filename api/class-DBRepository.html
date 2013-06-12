@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class DBRepository | jetForm</title>
+
+	<script type="text/javascript" src="resources/combined.js?394153670"></script>
+	<script type="text/javascript" src="elementlist.js?2701889413"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-DBRepository.html">DBRepository</a></li>
+				<li><a href="class-MySqlConnection.html">MySqlConnection</a></li>
+				<li><a href="class-UtilityIO.html">UtilityIO</a></li>
+				<li><a href="class-Validator.html">Validator</a></li>
+				<li><a href="class-ValidatorForm.html">ValidatorForm</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-writeLog.html">writeLog</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class DBRepository</h1>
+
+
+	<div class="description">
+	
+<p>Repository class</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>Author:</b>
+				Maurizio Brioschi (<a
+href="mailto:maurizio.brioschi&#64;ridesoft.org">maurizio.brioschi&#64;<!---->ridesoft.org</a>)<br />
+				<b>Version:</b>
+				0.1<br />
+		<b>Located at</b> <a href="source-class-DBRepository.html#2-169" title="Go to source code">lib/model/DBRepository.class.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-DBRepository.html#10-16" title="Go to source code">__construct</a>( <span><code><a href="class-MySqlConnection.html">MySqlConnection</a></code> <var>$DBConnection</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$DBConnection</var></dt>
+					<dd><code><code><a href="class-MySqlConnection.html">MySqlConnection</a></code></code><br>$DBConnection</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnection" id="_getConnection">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-MySqlConnection.html">MySqlConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnection">#</a>
+		<code><a href="source-class-DBRepository.html#17-23" title="Go to source code">getConnection</a>( )</code>
+
+		<div class="description short">
+			
+<p>get mysql db connection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>get mysql db connection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-MySqlConnection.html">MySqlConnection</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="genericInsert" id="_genericInsert">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_genericInsert">#</a>
+		<code><a href="source-class-DBRepository.html#25-60" title="Go to source code">genericInsert</a>( <span>string <var>$table</var></span>, <span>string <var>$array</var></span> )</code>
+
+		<div class="description short">
+			
+<p>do an insert $table with $array parameters</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>do an insert $table with $array parameters</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>$table</dd>
+					<dt><var>$array</var></dt>
+					<dd><code>string</code><br>$array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="genericUpdate" id="_genericUpdate">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_genericUpdate">#</a>
+		<code><a href="source-class-DBRepository.html#61-90" title="Go to source code">genericUpdate</a>( <span>string <var>$table</var></span>, <span>type <var>$array</var></span>, <span>string <var>$keyValue</var></span>, <span>string <var>$keyField</var> = <span class="php-quote">&quot;id&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>do an update to $table cwith $array parameters on $keyField with
+$keyValue</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>do an update to $table cwith $array parameters on $keyField with
+$keyValue</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd><code>string</code><br>$table</dd>
+					<dt><var>$array</var></dt>
+					<dd><code>type</code><br>$array</dd>
+					<dt><var>$keyValue</var></dt>
+					<dd><code>string</code><br>$keyValue</dd>
+					<dt><var>$keyField</var></dt>
+					<dd><code>string</code><br>$keyField</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSubscribers" id="_getSubscribers">
+
+		<td class="attributes"><code>
+			 public 
+			type
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSubscribers">#</a>
+		<code><a href="source-class-DBRepository.html#91-104" title="Go to source code">getSubscribers</a>( <span>string <var>$where</var> = <span class="php-quote">&quot;WHERE sent&lt;1;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>get subscribers</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>get subscribers</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd><code>string</code><br>$where</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>type</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createDB" id="_createDB">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createDB">#</a>
+		<code><a href="source-class-DBRepository.html#105-134" title="Go to source code">createDB</a>( <span>string <var>$db</var></span>, <span>string <var>$fields</var></span> )</code>
+
+		<div class="description short">
+			
+<p>create db</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>create db</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$db</var></dt>
+					<dd><code>string</code><br>$db</dd>
+					<dt><var>$fields</var></dt>
+					<dd><code>string</code><br>$fields</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dumpDb" id="_dumpDb">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dumpDb">#</a>
+		<code><a href="source-class-DBRepository.html#155-168" title="Go to source code">dumpDb</a>( <span>type <var>$user</var></span>, <span>type <var>$pwd</var></span>, <span>type <var>$db</var></span>, <span>type <var>$pathTo</var></span> )</code>
+
+		<div class="description short">
+			
+<p>make mysql db dump</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>make mysql db dump</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$user</var></dt>
+					<dd><code>type</code><br>$user</dd>
+					<dt><var>$pwd</var></dt>
+					<dd><code>type</code><br>$pwd</dd>
+					<dt><var>$db</var></dt>
+					<dd><code>type</code><br>$db</dd>
+					<dt><var>$pathTo</var></dt>
+					<dd><code>type</code><br>$pathTo</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		jetForm API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

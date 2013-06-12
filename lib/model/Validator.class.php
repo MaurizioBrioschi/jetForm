@@ -1,8 +1,9 @@
 <?php
 /**
+ * Generic class for validator
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Generic class for validator
+ * 
  */
 class Validator{
     protected $dbConnecetion;

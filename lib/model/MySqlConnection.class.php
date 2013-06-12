@@ -1,8 +1,9 @@
 <?php
 /**
+ * Class to manage MySql DB Connection
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Class to manage MySql DB Connection
+ * 
  */
  class MySqlConnection{
         

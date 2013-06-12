@@ -1,8 +1,9 @@
 <?php
 /**
+ * Class for form validation
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Class for form validation
+ * 
  */
 class ValidatorForm extends Validator{
     protected $fields = array();

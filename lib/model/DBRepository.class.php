@@ -1,8 +1,9 @@
 <?php
 /**
+ * Repository class
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Repository class
+ * 
  */
 class DBRepository  {
     private $connection;

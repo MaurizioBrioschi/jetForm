@@ -1,8 +1,9 @@
 <?php
 /**
+ * class for IO managment
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * class for IO managment
+ * 
  */
 class UtilityIO {
     /**
@@ -130,7 +131,7 @@ class UtilityIO {
              
     }  
     /**
-     * set permission to directory
+     * set permission to direc
      * @param string $path
      * @param int $mode
      */
