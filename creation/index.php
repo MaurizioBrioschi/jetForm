@@ -1,6 +1,6 @@
 <?php
 /**
- * Script per la generazione automatica del form di iscrizione alla newsletter di contactlab
+ * Script to generate form
  */
     include('../include.php');
     function writeLog($filelog,$msg){
