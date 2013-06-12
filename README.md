@@ -44,4 +44,4 @@ The only things you have to do is customize your confirm.html page inside form d
 License
 =======
 
-This bundle is under MIT license
+This code is under MIT license
