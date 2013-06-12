@@ -2,11 +2,11 @@
 /**
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Classe per la gestione IO
+ * class for IO managment
  */
 class UtilityIO {
     /**
-     * Rimuove il contenuto di una directory e la directory stessa se $removeDir è true
+     * remove directory content and directory if $removeDir is true
      * @param string $path 
      * @param boolean $removeDir 
      */
@@ -33,7 +33,7 @@ class UtilityIO {
         }
     }
     /**
-     * Rimuove un file
+     * remove file
      * @param string $filepath 
      */
     public static function removeFile($filepath)  {
@@ -49,7 +49,7 @@ class UtilityIO {
         }
     }
     /**
-     * replace the oldstring with a new string in a file
+     * replace string in file
      * @param String $path
      * @param String $oldString
      * @param String $newString
@@ -99,7 +99,7 @@ class UtilityIO {
      }
     }
     /**
-     * Uploada un file in $path con nome $file_dest, passato in post attraverso $post_var 
+     * upload file in $path with  $file_dest name, posted thrown $post_var 
      * @param string $file
      * @param string $path
      * @param string $file_dest
@@ -130,7 +130,7 @@ class UtilityIO {
              
     }  
     /**
-     * Imposta i permessi per una directory e i file in essa contenuti
+     * set permission to directory
      * @param string $path
      * @param int $mode
      */

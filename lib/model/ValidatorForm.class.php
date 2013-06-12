@@ -2,7 +2,7 @@
 /**
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Classe generica per la validazione del form
+ * Class for form validation
  */
 class ValidatorForm extends Validator{
     protected $fields = array();
@@ -17,7 +17,7 @@ class ValidatorForm extends Validator{
         }
     }
     /**
-     * Setta un attributo della pagina
+     * set an attribute
      * @param int $index
      * @param mixed $value 
      */
@@ -26,7 +26,7 @@ class ValidatorForm extends Validator{
 	$this->fields[$index] = $value;
     }  
     /**
-     * Ottiene il valore di un attributo della pagina
+     * get an attribute
      * @param mixed $index
      * @return mixed 
      */
@@ -57,7 +57,7 @@ class ValidatorForm extends Validator{
             $this->output();
      }
     /**
-     * Indica se il form è valido
+     * tell if form is valis
      * @return type
      */
     public function getIsFormValid()    {
@@ -65,21 +65,21 @@ class ValidatorForm extends Validator{
         return $this->isFormValid;
     }
     /**
-     * Ritorna l'array degli errori del form
+     * get array of error message
      * @return type
      */
     public function getErrorMessage()    {
         return $this->messageError;
     }
     /**
-     * Ritorna l'array contenente i campi non validi del form
+     * get not valid error
      * @return type
      */
     public function getFieldsError()    {
         return $this->fields_error;
     }
     /**
-     * Indica se il $field è un campo non valido
+     * tell if $field is not valid
      * @param type $field
      * @return boolean
      */
@@ -90,7 +90,7 @@ class ValidatorForm extends Validator{
         }
     }
     /**
-     * Controlla se il form è valido
+     * check if form is valid
      */
     private function checkForm()   {
        $this->isFormValid = true;
@@ -108,7 +108,7 @@ class ValidatorForm extends Validator{
                 }
            }
        }
-       
+       //check field depending by another
        foreach(array_keys($this->fields) as $key){
            $functions = explode(",",$this->findCheckFunctionConditional($key));
            foreach($functions as $function) {
@@ -124,7 +124,7 @@ class ValidatorForm extends Validator{
        }
     }
     /**
-     * Ritorna la funzione di validazione del campo $key
+     * get the function to validate $key
      * @param type $key
      * @return string
      */
@@ -142,7 +142,7 @@ class ValidatorForm extends Validator{
         return "";
     }
     /**
-     * Ritorna la funzione di validazione del campo $key se questa dipende dalla validazione di un altra campo
+     * get the function to validate $key if it depends by another field
      * @param type $key
      * @return string
      */

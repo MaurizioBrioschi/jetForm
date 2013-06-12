@@ -48,7 +48,15 @@
         private function connect()
         {
             $this->link = mysql_connect($this->server, $this->username, $this->password,true) or die("Impossible to connect to mySql DB: ". mysql_error());;
-            mysql_select_db($this->db, $this->link) or die("Schema don't exist: ".mysql_error());	
+            if(!mysql_select_db($this->db, $this->link)){
+                try{
+                     $SQL = "CREATE DATABASE  IF NOT EXISTS ".$this->db;
+                     $this->exeSQL($SQL);
+                     if(!mysql_select_db($this->db, $this->link)) die("Impossibile creare il database");
+                }  catch (Exception $e){
+                    
+                }
+            } 
         }
         
         /**

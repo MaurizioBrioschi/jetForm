@@ -6,6 +6,5 @@
     //automatic validate for: 'name'||'surname'||'sex'||'job'||'phone'|| 'address' || 'city' || 'cap' || 'nation' || age || email || privacy1 || privacy2
     $mandatory_fields = "email"; 
     
-    //variabili per script in supervise
-    $logName = "projectname_form_subscribe"; //nome che si vuole dare al log
+    $logName = "projectname_form_subscribe"; //name for file log
 ?>

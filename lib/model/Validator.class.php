@@ -2,7 +2,7 @@
 /**
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Classe generica di validatori
+ * Generic class for validator
  */
 class Validator{
     protected $dbConnecetion;
@@ -12,7 +12,7 @@ class Validator{
             $this->dbConnecetion=$connection;
     }
     /**
-     * ritorna sempre true
+     * is always true
      * @param type $value
      * @return boolean
      */
@@ -20,29 +20,29 @@ class Validator{
         return true;
     }
     /**
-     * verifica se il campo è vuoto 
+     * check if field is empty
      * @param type $value
      * @return boolean
      */
     public function isNotEmpty($value){
         if($value=='' || strlen($value)<1){
-            return(array(false,"Devi indicare {field}"));
+            return(array(false,"{field} is mandatory"));
         }else
             return array(true,"");
     }
     /**
-     * verifica se è un email valida
+     * check if is a valid email
      * @param type $email
      * @return boolean
      */
     public function isEmailValid($email)    {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-               return(array(false,"Devi indicare un {field} valida"));
+               return(array(false,"{field} is not valid"));
         }else
             return array(true,"");
     }
     /**
-     * varifica se l'intero è nel range $min e $max, con $equal a false di default
+     * check if integer is in range $min  $max, with $equal a false by default
      * @param type $value
      * @param type $min
      * @param type $max
@@ -52,20 +52,20 @@ class Validator{
     public function isIntegerInRange($value,$min=0, $max=100,$equal=false){
         if($equal)  {
              if(intval($value)>=$min && intval($value)<=$max){
-               return(array(false,"{field} non valido, deve essere compreso o uguale a $min e $max"));
+               return(array(false,"{field} not valid, the range is between $min and $max"));
             }else{
                 return array(true,"");
             }
         }else{
             if(intval($value)>$min && intval($value)<$max){
-               return(array(false,"{field} non valido, deve essere compreso tra $min e $max"));
+               return(array(false,"{field} not valid, the range is between $min and $max"));
             }else{
                 return array(true,"");
             }
         }
     }
     /**
-     * Verifica se $value è maggiore di zero
+     * check if $value is greter than zero
      * @param type $value
      * @return type
      */
@@ -73,11 +73,11 @@ class Validator{
         if(intval($value)>0)    
             return array(true,"");
         else {
-            return array(false,"Devi accettare {field}");
+            return array(false,"You must accept {field}");
         }
     }
     /**
-     * Controlla se il $field con $value è presente a database
+     * check if  $field with $value is in database
      * @param type $value
      * @param type $field
      * @return type
@@ -94,7 +94,7 @@ class Validator{
                     return array(true,"");
                 }
             }catch(Exception $e)    {
-                return array(false,"<strong>Si è verificato un errore di sistema: ".$e->getMessage()."</strong><br />");
+                return array(false,"<strong>An error occured: ".$e->getMessage()."</strong><br />");
                 $this->isFormValid = false;
             }
         }else{

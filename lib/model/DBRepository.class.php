@@ -2,19 +2,19 @@
 /**
  * @author Maurizio Brioschi (maurizio.brioschi@ridesoft.org) 
  * @version 0.1 
- * Classe che funge da repository 
+ * Repository class
  */
 class DBRepository  {
     private $connection;
     /**
-     * Costruttore
+     * Constructor
      * @param MySqlConnection $DBConnection
      */
     public function __construct(MySqlConnection $DBConnection){
         $this->connection = $DBConnection;
     }
     /**
-     * Restituisce la connessione
+     * get mysql db connection
      * @return MySqlConnection
      */
     public function getConnection(){
@@ -22,7 +22,7 @@ class DBRepository  {
     }
     
     /**
-     * Crea ed esegue una insert in una $table con i parametri passata da $array
+     * do an insert $table with $array parameters
      * @param string $table
      * @param string $array
      * @return int
@@ -58,7 +58,7 @@ class DBRepository  {
         }
     }
     /**
-     * Crea ed esegue un'update su una $table con parametry passati in $array sulla chiave $keyField con valore $keyValue
+     * do an update to $table cwith $array parameters on $keyField with $keyValue
      * @param string $table
      * @param type $array
      * @param string $keyValue
@@ -88,7 +88,7 @@ class DBRepository  {
         }
     }
     /**
-     * Ottiene i registrati al form 
+     * get subscribers
      * @param string $where
      * @return type
      */
@@ -102,7 +102,7 @@ class DBRepository  {
         }
     }
     /**
-     * Crea il database del form
+     * create db
      * @param string $db
      * @param string $fields
      * @return string
@@ -120,10 +120,7 @@ class DBRepository  {
             foreach($fields as $field)  {
                 $SQL .= ", $field ".$this->getFieldType($field);
             }
-                $SQL .= ", clab_id int(11) DEFAULT NULL,
-                 inserted_at datetime DEFAULT NULL,
-                 sent tinyint(1) DEFAULT NULL,
-                PRIMARY KEY (id)
+                $SQL .= ", PRIMARY KEY (id)
               ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
                  $this->connection->exeSQL($SQL);
@@ -135,7 +132,7 @@ class DBRepository  {
          }
     }
     /**
-     * Ottiene il valore del campo $field da impostare a database
+     * get $field type to set a database
      * @param string $field
      * @return string
      */
@@ -155,7 +152,7 @@ class DBRepository  {
         return "varchar(255) DEFAULT NULL";
     }
     /**
-     * Crea un dump del db nella directory $pathTo
+     * make mysql db dump
      * @param type $user
      * @param type $pwd
      * @param type $db
