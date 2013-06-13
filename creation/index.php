@@ -43,6 +43,7 @@
     ob_end_clean();
     file_put_contents("../form/index.php", $content,FILE_APPEND);
     fclose($handle);
+    UtilityIO::chmod("../form/index.php", "777");
     writeLog($filelog,"----------index.html CREATED");
     writeLog($filelog,"----------CREATION confirm.html ---");
     try{
@@ -57,7 +58,7 @@
     }  catch (Exception $e) {
          writeLog($filelog,"[ WARNING ] ".$e->getMessage());
     }
-    
+    UtilityIO::chmod("../form/confirm.html", "777");
     writeLog($filelog,"---------- confirm.html CREATED");
     writeLog($filelog,"---------- CREATION subscribe.php ---");
     try{
@@ -108,7 +109,7 @@
     }\n
     ?>\n";
     file_put_contents("../form/subscribe.php", $content,FILE_APPEND);
-    
+    UtilityIO::chmod("../form/subscribe.php", "777");
     writeLog($filelog,"---------INSERT ERROR PART MANAGMENT ---");
     ob_start();
     include("form.php");
