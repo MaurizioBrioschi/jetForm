@@ -39,9 +39,3 @@ Usage
 Just time in your browser the url for form creation: http://www.yoursite.com/creation 
 You have your database  (you can find a dump into sub directory data), your form and all the action for subscribtion.
 The only things you have to do is customize your confirm.html page inside form directory and personalize with some color your new form :)
-
-
-License
-=======
-
-This code is under MIT license
